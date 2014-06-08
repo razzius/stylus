@@ -54,6 +54,26 @@ addSuite('dependency resolver', readDir('test/deps-resolver'), function(test){
   style.deps().join('\n').trim().should.equal(deps);
 });
 
+// sourcemap cases
+
+addSuite('sourcemap', readDir('test/sourcemap'), function(test){
+  var inline = ~test.indexOf('inline')
+    , path = 'test/sourcemap/' + test + '.styl'
+    , styl = fs.readFileSync(path, 'utf8').replace(/\r/g, '')
+    , style = stylus(styl).set('filename', path).set('sourcemap', { inline: inline })
+    , expected = fs.readFileSync(path.replace('.styl', inline ? '.css' : '.map'), 'utf-8')
+      .replace(/\r/g, '').trim();
+
+  style.render(function(err, css) {
+    if (err) throw err;
+    if (inline) {
+      css.should.equal(expected);
+    } else {
+      JSON.stringify(style.sourcemap).should.equal(expected);
+    }
+  });
+});
+
 // JS API
 
 describe('JS API', function(){
