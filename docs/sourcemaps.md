@@ -14,10 +14,3 @@ permalink: docs/sourcemaps.html
   `stylus -m style.styl`
 
   You can also run this command while watching a file. For instance: `stylus -w -m style.styl`. This will update your sourcemap everytime you save.
-
-## Usage with Chrome DevTools
-
-  - Open DevTools
-  - Click the Settings cog in the bottom right
-  - `Settings > General > Sources > Enable CSS Source Maps`
-  - Refresh your page and Inspect an element, in your Elements tab you should see your element attached to `style.styl` rather than the typical `style.css`. Click on this link to jump to the Stylus block used to generate the final CSS.
