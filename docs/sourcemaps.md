@@ -14,3 +14,24 @@ permalink: docs/sourcemaps.html
   `stylus -m style.styl`
 
   You can also run this command while watching a file. For instance: `stylus -w -m style.styl`. This will update your sourcemap everytime you save.
+
+## JavaScript API
+
+  Set the `sourcemap` setting with an options object or a boolean value:
+
+    var stylus = require('stylus');
+
+    var style = stylus(str)
+      .set('filename', 'file.styl')
+      .set('sourcemap', options);
+
+    style.render(function(err, css) {
+      // generated sourcemap object
+      console.log(style.sourcemap);
+    });
+
+### Options
+
+    `comment`   Adds a comment with the `sourceMappingURL` to the generated CSS (default: `true`)
+    `inline`    Inlines the sourcemap with full source text in base64 format (default: `false`)
+    `rootUrl`   The URL root from which all sources are relative
