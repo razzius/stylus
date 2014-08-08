@@ -335,6 +335,9 @@ if (watchers && !files.length) {
   });
 }
 
+// --sourcemap flag is not working with stdio
+if (sourcemap && !files.length) sourcemap = false;
+
 /**
  * Open the default browser to the CSS property `name`.
  *
