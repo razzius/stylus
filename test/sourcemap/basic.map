@@ -1,1 +1,1 @@
-{"version":3,"sources":["test/sourcemap/basic.styl"],"names":[],"mappings":"AAEA;AACA;AACA;AACE;AACA;;AAEA;;;AACE;;AAEJ;AACE;;AAEiC;AACjC;AACE","file":"basic.css"}
+{"version":3,"sources":["test/sourcemap/basic.styl"],"names":[],"mappings":"AAEA;AACA;AACA;EACE,OAAO,MAAP;EACA,QAAQ,OAAR;;AAEA;;;EACE,OAAO,QAAP;;AAEJ;EACE,OAAO,KAAP;;AAEiC;AACjC;IACE,OAAO,QAAP","file":"basic.css"}
