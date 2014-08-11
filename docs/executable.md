@@ -34,7 +34,8 @@ Stylus ships with the `stylus` executable for converting Stylus to CSS.
                                 indicating the corresponding Stylus line
         -m, --sourcemap         Generates a sourcemap in sourcemaps v3 format
         --sourcemap-inline      Inlines sourcemap with full source text in base64 format
-        --sourcemap-root <url>  The URL root from which all sources are relative
+        --sourcemap-root <url>  Adds this <url> to sourcemap and all sources
+        --sourcemap-base <path> Base <path> from which sourcemap and all sources are relative
         -P, --prefix [prefix]   Prefix all css classes
         -p, --print             Print out the compiled CSS
         --import <file>         Import stylus <file>

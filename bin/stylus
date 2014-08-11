@@ -169,7 +169,8 @@ var usage = [
   , '                            indicating the corresponding Stylus line'
   , '    -m, --sourcemap         Generates a sourcemap in sourcemaps v3 format'
   , '    --sourcemap-inline      Inlines sourcemap with full source text in base64 format'
-  , '    --sourcemap-root <url>  The URL root from which all sources are relative'
+  , '    --sourcemap-root <url>  Adds this <url> to sourcemap and all sources'
+  , '    --sourcemap-base <path> Base <path> from which sourcemap and all sources are relative'
   , '    -P, --prefix [prefix]   prefix all css classes'
   , '    -p, --print             Print out the compiled CSS'
   , '    --import <file>         Import stylus <file>'
@@ -227,6 +228,12 @@ while (args.length) {
       if (!url) throw new Error('--sourcemap-root <url> required');
       sourcemap = sourcemap || {};
       sourcemap.rootUrl = url;
+      break;
+    case '--sourcemap-base':
+      var path = args.shift();
+      if (!path) throw new Error('--sourcemap-base <path> required');
+      sourcemap = sourcemap || {};
+      sourcemap.basePath = path;
       break;
     case '-P':
     case '--prefix':
