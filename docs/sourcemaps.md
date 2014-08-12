@@ -32,8 +32,8 @@ permalink: docs/sourcemaps.html
 
 ### Options
 
-    `comment`   Adds a comment with the `sourceMappingURL` to the generated CSS (default: `true`)
-    `inline`    Inlines the sourcemap with full source text in base64 format (default: `false`)
-    `rootUrl`   Adds this URL to sourcemap and all sources
-    `basePath`  Base path from which sourcemap and all sources are relative (default: `.`)
+    `comment`     Adds a comment with the `sourceMappingURL` to the generated CSS (default: `true`)
+    `inline`      Inlines the sourcemap with full source text in base64 format (default: `false`)
+    `sourceRoot`  "sourceRoot" property of the generated sourcemap
+    `basePath`    Base path from which sourcemap and all sources are relative (default: `.`)
 

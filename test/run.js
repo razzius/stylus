@@ -61,7 +61,7 @@ addSuite('sourcemap', readDir('test/sourcemap'), function(test){
     , path = 'test/sourcemap/' + test + '.styl'
     , styl = readFile(path)
     , style = stylus(styl).set('filename', path).set('sourcemap',
-      { inline: inline, rootUrl: '/', basePath: 'test/sourcemap' })
+      { inline: inline, sourceRoot: '/', basePath: 'test/sourcemap' })
     , expected = readFile(path.replace('.styl', inline ? '.css' : '.map'));
 
   style.render(function(err, css) {

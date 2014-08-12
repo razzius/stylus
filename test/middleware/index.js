@@ -34,7 +34,7 @@ describe('middleware', function() {
       var req = { method: 'GET', url: '/test.css' }
         , path;
       stylus.middleware({
-        sourcemap: { rootUrl: '/' },
+        sourcemap: { sourceRoot: '/' },
         src: __dirname,
         dest: __dirname
       })(req, res, function() {
